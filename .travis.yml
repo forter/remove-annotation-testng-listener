@@ -10,8 +10,8 @@ deploy:
   secret_access_key:
   secure: "cXAJAt6ijJQA29kRG0PlX7ybDH0mDLafal+pIsib+OruambW6d5bWnoTKXGOwhIYR49mb3lPfaYxQ3x99sgD8pXxjSW6MqAv62laTpAAkxXjVDDk8aL4/Tq4RaCsqMQ21AOgFk6u4hvzPrWxyOuJXezVfgsIF6fV3pw29UOCgocbwEdgEowJ0PCVN1Y5BULZ7DTmRBzwsH0dpY2fcB692n0K4dCzWIcr+3TpJCFlRVjJ2E/fo7c8qgsNJjWSYLrHgp3EoBeum5AYRXQVJC6SUhbtP3hFuqKVvEaX46HMa1aqDJ4l7EsrgrTeOV+7eHnD/axaxz9flp3/p11mXfMQOa7WXvwsgJ093hrTcDtRFeQpsB0FA906+BPVWNeGKeVDwDwpYlTqVcsSlu97HQMOOZmf2CsWbWITm8dObxhBwQfo6Sw8OcPrUPReBOcjwmOwkLM/RqUBLcwjEjZUqVW5IEYYAFMud5ICygpdzJhu9FIFkjzvEbEgPga8QK/0pO0Rsm271p0NqHzx7kqbtj4x6zxebAcj5z8Lbwt9N4M2+qAlJOU//OsPalre0Pyi51Y86QmdJF0e3gF+RlPgZ9QOzPFdXPY5oFErRTiY1u9FB2zsfHsS0ELQithXlwGLiSswxrkzzWzq7e9VhfW4rSDTtfnbkg9MRdAu5nsEdSWqlUE="
   bucket: oss.forter.com
-  local-dir: /home/travis/.m2/repository/com/forter/riemann-testng-listener/
-  upload-dir: repository/com/forter/riemann-testng-listener
+  local-dir: /home/travis/.m2/repository/com/forter/remove-annotation-testng-listener/
+  upload-dir: repository/com/forter/remove-annotation-testng-listener
   skip_cleanup: true
   on:
     all_branches: true
