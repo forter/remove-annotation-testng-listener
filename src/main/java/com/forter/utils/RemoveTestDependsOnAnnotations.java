@@ -33,6 +33,9 @@ public class RemoveTestDependsOnAnnotations implements IAnnotationTransformer {
     public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor,
                           Method testMethod) {
 
+        if (testMethod != null) {
+            testClass = testMethod.getDeclaringClass();
+        }
         if (testClass != null && removeDepsClasses.contains(testClass.getSimpleName())) {
             annotation.setDependsOnGroups(null);
             annotation.setDependsOnMethods(null);
