@@ -16,11 +16,11 @@ import static java.util.regex.Pattern.quote;
  * Test runner options: -listener com.forter.RemoveTestDependsOnAnnotations (already in parent pom.xml so no need to add commandline option)
  * VM Options example: -DremoveDepsClasses=VelocityIT
  */
-public class RemoveTestDependsOnAnnotations implements IAnnotationTransformer {
+public class RemoveTestDependsOnGroupsAnnotations implements IAnnotationTransformer {
 
     private final Set<String> removeDepsClasses;
 
-    public RemoveTestDependsOnAnnotations() {
+    public RemoveTestDependsOnGroupsAnnotations() {
         String tests = System.getProperty("removeDepsClasses");
         if (!Strings.isNullOrEmpty(tests)) {
             removeDepsClasses = new HashSet(Arrays.asList(tests.split(quote(","))));
@@ -40,7 +40,6 @@ public class RemoveTestDependsOnAnnotations implements IAnnotationTransformer {
                 (removeDepsClasses.contains(testClass.getSimpleName()) ||
                  removeDepsClasses.contains("*"))) {
             annotation.setDependsOnGroups(null);
-            annotation.setDependsOnMethods(null);
         }
     }
 }
